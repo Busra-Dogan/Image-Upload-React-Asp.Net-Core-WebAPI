@@ -46,7 +46,6 @@ D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeReg
 D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\obj\Debug\netcoreapp3.1\EmployeeRegisterAPI.csproj.AssemblyReference.cache
 D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\obj\Debug\netcoreapp3.1\EmployeeRegisterAPI.GeneratedMSBuildEditorConfig.editorconfig
 D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\obj\Debug\netcoreapp3.1\EmployeeRegisterAPI.AssemblyInfoInputs.cache
 D:\GITHUB\Image-Upload-React-Asp.Net-Core-WebAPI\EmployeeRegisterAPI\EmployeeRegisterAPI\obj\Debug\netcoreapp3.1\EmployeeRegisterAPI.AssemblyInfo.cs

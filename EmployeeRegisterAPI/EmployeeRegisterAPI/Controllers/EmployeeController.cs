@@ -13,12 +13,12 @@ namespace EmployeeRegisterAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeModelsController : ControllerBase
+    public class EmployeeController : ControllerBase
     {
         private readonly EmployeeDbContext _context;
         private readonly IWebHostEnvironment _hostEnvironment;
 
-        public EmployeeModelsController(EmployeeDbContext context, IWebHostEnvironment hostEnvironment)
+        public EmployeeController(EmployeeDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
             this._hostEnvironment = hostEnvironment;
@@ -59,7 +59,7 @@ namespace EmployeeRegisterAPI.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmployeeModel(int id, EmployeeModel employeeModel)
+        public async Task<IActionResult> PutEmployeeModel(int id, [FromForm]EmployeeModel employeeModel)
         {
             if (id != employeeModel.EmployeeId)
             {
@@ -116,7 +116,7 @@ namespace EmployeeRegisterAPI.Controllers
             {
                 return NotFound();
             }
-
+            DeleteImage(employeeModel.ImageName);
             _context.Employees.Remove(employeeModel);
             await _context.SaveChangesAsync();
 

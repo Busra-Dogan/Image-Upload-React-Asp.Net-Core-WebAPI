@@ -12,7 +12,7 @@ export default function EmployeeList() {
     }, [])
 
 
-    const employeeAPI = (url = 'https://localhost:44389/api/EmployeeModels/') => {
+    const employeeAPI = (url = 'https://localhost:44389/api/Employee/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -28,25 +28,33 @@ export default function EmployeeList() {
     }
 
     const addOrEdit = (formData, onSuccess) => {
-        if (formData.get('employeeId') === "0") {            
+        if (formData.get('employeeId') === "0")            
         employeeAPI().create(formData)
             .then(res => {
                 onSuccess();
                 refreshEmployeeList();
             })
             .catch(err => console.log(err))
-        }else{
+        else
             employeeAPI().update(formData.get('employeeId'),formData)
             .then(res => {
                 onSuccess();
                 refreshEmployeeList();
             })
             .catch(err => console.log(err))
-        }
+        
 
     }
     const showRecordDetails = data =>{
         setRecordForEdit(data)
+    }
+
+    const onDelete = (e, id) => {
+        e.stopPropagation();
+        if (window.confirm('Are you sure to delete this record?'))
+            employeeAPI().delete(id)
+                .then(res => refreshEmployeeList())
+                .catch(err => console.log(err))
     }
 
     const imageCard = data => (
@@ -54,7 +62,10 @@ export default function EmployeeList() {
             <img src={data.imageSrc} className="card-img-top rounded-circle" />
             <div className='card-body'>
                 <h5>{data.employeeName}</h5>
-                <span>{data.occupation}</span>
+                <span>{data.occupation}</span> <br />
+                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.employeeId))}>
+                    <i className="far fa-trash-alt"></i>
+                </button>
             </div>
         </div>
     )
